@@ -21,4 +21,10 @@ public class EmployeeController {
     public Iterable<EmployeeRequestDTO> getAllEmployees() {
         return employeeService.getAllEmployees();
     }
+
+    @PutMapping("/employees/update")
+    public EmployeeRequestDTO updateEmployee(@ModelAttribute EmployeeRequestDTO employeeRequestDTO) {
+        return employeeService.updateEmployee(employeeRequestDTO);
+    }
+
 }
